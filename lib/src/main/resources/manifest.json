@@ -1,0 +1,8 @@
+{
+    "group": "com.hyspain",
+    "id": "security",
+    "version": "1.0.0",
+    "Name": "HySpain Security",
+    "displayName": "HySpain Security",
+    "mainClass": "com.hyspain.security.DoorMod"
+}
