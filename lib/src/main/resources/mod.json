@@ -1,0 +1,8 @@
+{
+    "id": "hyspain_security",
+    "name": "HySpain Security System",
+    "version": "1.0.0",
+    "author": "TheWick",
+    "description": "Mod de seguridad que permite vincular puertas a jugadores y protegerlas con PIN.",
+    "mainClass": "com.hyspain.security.DoorMod"
+}

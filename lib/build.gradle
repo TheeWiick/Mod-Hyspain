@@ -1,0 +1,36 @@
+plugins {
+    // Plugin necesario para crear una librería de Java (.jar)
+    id 'java-library'
+}
+
+repositories {
+    // Repositorio principal de donde bajaremos GSON
+    mavenCentral()
+}
+
+dependencies {
+    // Usamos el archivo local que acabamos de descargar
+    implementation files('libs/gson-2.10.1.jar')
+
+    // Si los tests te siguen dando error, comenta esta línea para que no estorben
+    // testImplementation 'org.junit.jupiter:junit-jupiter:5.9.1'
+}
+
+java {
+    toolchain {
+        // Mantenemos la versión 21 para máximo rendimiento
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+// Configuración para que el archivo final tenga un nombre profesional
+jar {
+    archiveFileName = 'HySpainSecurity.jar'
+    manifest {
+        attributes(
+            'Main-Class': 'com.hyspain.security.DoorMod',
+            'Implementation-Title': 'HySpain Security',
+            'Implementation-Version': '1.0.0'
+        )
+    }
+}
